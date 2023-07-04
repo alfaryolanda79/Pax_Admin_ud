@@ -6,6 +6,7 @@ import ListadoPacientes from "../components/ListadoPacientes";
 function Landingpage(){
 
     const [pacientes, setPacientes] = useState([]);
+    const [paciente, setPaciente] = useState({});
 
     return(
         <div className="container mx-auto mt-5">
@@ -14,10 +15,12 @@ function Landingpage(){
                 <Formulario 
                     pacientes={pacientes}
                     setPacientes = {setPacientes}
+                    paciente={paciente}
                 />
                     
                 <ListadoPacientes
                     pacientes={pacientes}
+                    setPaciente={setPaciente}
 
                 />
             </div>
